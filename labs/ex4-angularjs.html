@@ -1,0 +1,20 @@
+<html ng-app="movies">
+<head>
+<script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+<script src="./ex4-controller.js"></script>
+</head>
+
+<body ng-controller="MoviesController">
+
+  <p>Query the movie database: <input ng-model="q"> <span><button type="submit" id="" ng-click="locate(q)">Query the MovieDB</button></span></p>
+  <p>User-entered query: {{q}}</p>
+
+  <ul>
+    <li ng-repeat="movie in cartoons">
+      <h4>{{movie.name}} ({{movie.year}})</h4>
+      <p>{{movie.descr}}</p>
+    </li>
+  </ul>
+
+</body>
+</html>

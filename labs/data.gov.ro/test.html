@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+<script src="./script.js"></script>
+</head>
+
+
+<body>
+<div ng-app="data_gov_test">
+  <div ng-controller="DataCtrl">
+<p>Raw (JSON) response from server:</p>
+    <pre ng-model="data">
+     {{result}}
+    </pre>
+    
+<p>List of available datasets:</p>
+<ol ng-controller="DataCtrl">
+  <li ng-repeat="item in result">{{item}}</li>
+</ol>
+  </div>
+</div>  
+</body>
+
+</hmtl>
